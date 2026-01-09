@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://pyscript.net/releases/2025.7.3/core.css">
+    <script type="module" src="https://pyscript.net/releases/2025.7.3/core.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <title>Data Types in Python</title>
+    <title>Student Club Information</title>
+
+    <style>
+        body {
+            background-color: #002147;
+            font-family: "EB Garamond", sans-serif;
+            text-align: left;
+            margin: 0;
+            padding: 0;
+        }
+
+        div {
+            background-color: #B9D9EB;
+            color: black;
+            border: solid ;
+            font-size: 23px;
+            text-align: center;
+            width: 900px;
+            height: 600px;
+            justify-content: center;
+            border-radius: 20px;
+            margin: 0 auto;
+            margin-bottom: 10px;
+
+        }
+
+        .div3 {
+            background-color: #F0F8FF;
+            color: black;
+            border: solid;
+            font-size: 20px;
+            text-align: left;           
+            width: 400px;                 
+            height: 310px;
+            padding: 15px;              
+            border-radius: 20px;
+            margin: 20px auto;          
+            white-space: pre-wrap;      
+            box-sizing: border-box;     
+        }
+
+        nav {
+            background-color: #002147;
+            display: flex;
+            justify-content: center;
+            padding: 15px 0;
+            gap: 30px;
+            font-weight: 600;
+            font-size: 18px;
+            margin-bottom: 20px;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            padding: 5px 10px;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        nav a:hover {
+            background-color: #F0F8FF;
+            color: black;
+        }
+
+        .img-logo{
+            display: block;
+            margin: 0 auto;
+            height: 100px;
+            width: 100px;
+        }
+
+    </style>
+
+</head>
+<body>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="grade.html" aria-current="page">Grade Calculator</a>
+        <a href="clubs.html">Clubs</a>
+    </nav>
+
+    <div class="container">
+        <img src="logo.png" class="img-logo" alt="logo">
+        <h1>Student Club Information</h1>
+    <select id="clubs" py-change="show_club_info(event)">
+        <option value="">Select a club</option>
+        <option>Tennis Club</option>
+        <option>Math Club</option>
+        <option>Music Club</option>
+        <option>Debate Club</option>
+    </select>
+
+        <div class="div3" id="output"></div>
+
+    </div>
+    <py-script src="main.py"></py-script>
+</body>
